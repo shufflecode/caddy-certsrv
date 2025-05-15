@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"os"
 
-	certsrv "github.com/davidventura/caddy-certsrv"
+	certsrv "github.com/shufflecode/caddy-certsrv"
 
 	"gopkg.in/jcmturner/gokrb5.v7/keytab"
 )
