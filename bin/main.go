@@ -7,7 +7,7 @@ import (
 	"crypto/x509/pkix"
 	"fmt"
 	"os"
-
+	"log"
 	certsrv "github.com/shufflecode/caddy-certsrv"
 
 	"gopkg.in/jcmturner/gokrb5.v7/keytab"
@@ -34,6 +34,7 @@ func main() {
 	}
 	*/
 	fmt.Printf("Obtaining a cert for %s by asking %s\n", certFor, certSrv)
+	log.Printf("certSrv: %s, username: %s, password: %s, realm: %s", certSrv, username, password, realm)
 	spnegoCl, err := certsrv.MakeClientWithPassword(certSrv, username, password, realm)
 
 	keyBytes, err := rsa.GenerateKey(rand.Reader, 2048)
