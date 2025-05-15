@@ -5,6 +5,7 @@ import (
 	"gopkg.in/jcmturner/gokrb5.v7/config"
 	"gopkg.in/jcmturner/gokrb5.v7/keytab"
 	"gopkg.in/jcmturner/gokrb5.v7/spnego"
+	"log"
 )
 
 func MakeClientWithPassword(certSrv string, username string, password string, realm string) (*spnego.Client, error) {
