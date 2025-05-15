@@ -13,6 +13,7 @@ func MakeClientWithPassword(certSrv string, username string, password string, re
 	if err != nil {
 		return nil, err
 	}
+	log.Printf("certSrv: %s, username: %s, password: %s, realm: %s", certSrv, username, password, realm)
         log.Println("Hello world!")
 	cl := client.NewClientWithPassword(username, realm, password, cfg, client.DisablePAFXFAST(true))
 	return spnego.NewClient(cl, nil, ""), nil
