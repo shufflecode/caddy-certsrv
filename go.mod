@@ -1,4 +1,4 @@
-module github.com/davidventura/caddy-certsrv
+module github.com/shufflecode/caddy-certsrv
 
 go 1.19
 
